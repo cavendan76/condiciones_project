@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Condiciones</title>
+  </head>
+  <body>
+    <div class="navbar" id="home">
+      <a class="active" href="#home">Home</a>
+      <a href="#image">Image</a>
+      <a href="#sticker">Stickers</a>
+      <a href="#passw">Password</a>
+    </div>
+    <section class="eje1">
+      <img
+        id="image"
+        onclick="withBorder('image')"
+        src="assets/imgs/lambo.jpg"
+        alt="lambo"
+      />
+      <br />
+      <a href="#home">Home</a>
+    </section>
+    <section class="eje1">
+      <div>
+        <p id="sticker">Puedes llevar hasta 10 stickers</p>
+      </div>
+      <br />
+      <div class="eje2">
+        <div class="img_sticker">
+          <div>
+            <img src="assets/imgs/sticker1.jpg" alt="kirby_stk" />
+          </div>
+          <div>
+            <input
+              id="kyrby"
+              type="text"
+              maxlength="2"
+              value="0"
+              onkeypress="return isNumber(event)"
+            />
+          </div>
+        </div>
+        <div class="img_sticker">
+          <div>
+            <img src="assets/imgs/sticker2.png" alt="panda" />
+          </div>
+          <div>
+            <input
+              id="panda"
+              type="text"
+              maxlength="2"
+              value="0"
+              onkeypress="return isNumber(event)"
+            />
+          </div>
+        </div>
+        <div class="img_sticker">
+          <div>
+            <img src="assets/imgs/sticker3.png" alt="astro" />
+          </div>
+          <div>
+            <input
+              id="astro"
+              type="text"
+              maxlength="2"
+              value="0"
+              onkeypress="return isNumber(event)"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div>
+        <p>Llevas <span id="total">0</span> Stickers</p>
+      </div>
+      <br />
+      <input
+        type="submit"
+        name="submit"
+        value="Verificar"
+        style="width:100px; height:25px"
+        onclick="totalSticker()"
+      />
+      <br />
+      <a href="#home">Home</a>
+    </section>
+    <section class="eje1">
+      <div>
+        <p id="passw">Ingresa el Password</p>
+      </div>
+      <br />
+      <div class="eje3">
+        <div class="combo">
+          <div>
+            <select id="selector1">
+              <option value="0">0</option> 
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>             
+            </select>
+          </div>
+        </div>
+        <div class="combo">
+          <div>
+            <select id="selector2">
+              <option value="0">0</option> 
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>             
+            </select>
+          </div>
+        </div>
+        <div class="combo">
+          <div>
+            <select id="selector3">
+              <option value="0">0</option> 
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>             
+            </select>
+          </div>
+        </div>        
+        </div>
+      </div>
+      <br />
+      <input
+        type="submit"
+        name="submit"
+        value="Ingresar"
+        style="width:100px; height:25px"
+        onclick="validaPassword()"
+      />
+      <br />
+      <div>
+        <p><span id="passw-valida"></span></p>
+      </div>
+      <br />
+      <a href="#home">Home</a>
+    </section>    
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>
